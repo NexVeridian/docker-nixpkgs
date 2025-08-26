@@ -6,6 +6,7 @@
   nix-fast-build,
   findutils,
   util-linux,
+  skopeo,
 }:
 (docker-nixpkgs.nix.override {
   nix = pkgs.nixVersions.latest;
@@ -16,6 +17,7 @@
     nix-fast-build
     findutils
     util-linux
+    skopeo
   ];
 }).overrideAttrs
   (prev: {
